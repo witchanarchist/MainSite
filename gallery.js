@@ -9,7 +9,7 @@ let maxPost = 1;
 // Zlicz obrazki
 async function findMaxImageNumber() {
   let n = 1;
-  while (await imageExists(`imgs/img${n}.png?v=${Date.now()}`)) {
+  while (await imageExists(`img${n}.png?v=${Date.now()}`)) {
     n++;
   }
   return n - 1;
@@ -18,7 +18,7 @@ async function findMaxImageNumber() {
 // Zlicz posty
 async function findMaxPostNumber() {
   let n = 1;
-  while (await fileExists(`posts/post${n}.txt?v=${Date.now()}`)) {
+  while (await fileExists(`post${n}.txt?v=${Date.now()}`)) {
     n++;
   }
   return n - 1;
@@ -51,14 +51,14 @@ async function fileExists(url) {
 // Ładuje obrazek
 function loadImage(n) {
   const imgElement = document.getElementById("mainImage");
-  imgElement.src = `imgs/img${n}.png?v=${Date.now()}`;
+  imgElement.src = `img${n}.png?v=${Date.now()}`;
   const counter = document.getElementById("imageCounter");
   counter.textContent = `${currentImage} / ${maxImage}`;
 }
 
 // Ładuje post
 async function loadPost(n) {
-  const res = await fetch(`posts/post${n}.txt?v=${Date.now()}`);
+  const res = await fetch(`post${n}.txt?v=${Date.now()}`);
   const text = await res.text();
   document.getElementById("postContent").innerHTML = text;
   const counter = document.getElementById("postCounter");

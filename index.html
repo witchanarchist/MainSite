@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
   <style>
 	body { background-image: url(bcg1.png); background-repeat: repeat; margin: 0; }
 	#mainwrapper { background: white; width: 50%; height: 70%; display: flex; flex-direction: column; align-items: center; margin-left: 25%; padding: 40px }
@@ -16,11 +17,16 @@
     #postContent { margin-top: 1em; white-space: pre-wrap; max-width: 80ch; text-align: center; padding: 0 1em;}
     button { background: transparent; margin: 0.25em; border: none; opacity: 1.0}
 	button:hover { opacity: 0.5 }
-	.Primer {
+	.PrimerSC {
 		font-family: "IM Fell Great Primer SC", serif;
 		font-weight: 500;
 		font-style: normal;
 		font-size: 120%;
+		}
+	.Primer {
+  		font-family: "IM Fell Great Primer", serif;
+  		font-weight: 400;
+  		font-style: normal;
 		}
 
   </style>
@@ -37,7 +43,7 @@
 		<button id="imageCounter">0 / 0</button>
 
 
-		<div id="postContent" class="Primer"></div>
+		<div id="postContent" class="PrimerSC"></div>
 		<button id="postCounter">0 / 0</button>
 		<div>
 			<button onclick="prevPost()">Previous post</button>

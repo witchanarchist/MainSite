@@ -59,7 +59,7 @@ function loadImage(n) {
 // Ładuje post
 async function loadPost(n) {
   const res = await fetch(`post${n}.txt?v=${Date.now()}`);
-  const text = await res.text();
+  let text = await res.text();
   text = `<p>${text}</p>`;
   document.getElementById("postContent").innerHTML = text;
   const counter = document.getElementById("postCounter");

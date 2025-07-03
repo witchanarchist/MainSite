@@ -60,7 +60,7 @@ function loadImage(n) {
 async function loadPost(n) {
   const res = await fetch(`post${n}.txt?v=${Date.now()}`);
   let text = await res.text();
-  text = `<p>${text}</p>`;
+  text = `<p> ${text} </p>`;
   document.getElementById("postContent").innerHTML = text;
   const counter = document.getElementById("postCounter");
   counter.textContent = `${currentPost} / ${maxPost}`;

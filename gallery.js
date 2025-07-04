@@ -1,5 +1,11 @@
 console.log("gallery.js start");
 
+(function chooseBackground() {
+  const useAlt = Math.floor(Math.random() * 200) === 0;
+  const bg = useAlt ? "bcg2.png" : "bcg1.png";
+  document.body.style.backgroundImage = `url(${bg})`;
+})();
+
 let currentImage = 1;
 let maxImage = 1;
 

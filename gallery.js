@@ -3,7 +3,7 @@ console.log("gallery.js start");
 
 (function chooseBackground() {
   const useAlt = Math.floor(Math.random() * 2) === 0;
-  const bg = useAlt ? "bcg2.png" : "bcg1.png";
+  const bg = useAlt ? "bcg1.png" : "bcg1.png";
   document.body.style.backgroundImage = `url(${bg})`;
 })();
 
